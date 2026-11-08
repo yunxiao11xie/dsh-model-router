@@ -1,0 +1,24 @@
+{
+  "name": "dsh-model-router",
+  "version": "0.4.0",
+  "type": "module",
+  "description": "Serial model orchestration for the DeepSeek Harness: a delegate tool over a built-in catalog of current Chinese-market models; the main agent splits work and picks a model per subtask, with session-policy checks and a lenient default-model fallback.",
+  "keywords": ["dsh-plugin", "deepseek-harness", "dsh", "model", "orchestration", "delegation", "multi-model"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunxiao11xie/dsh-model-router.git"
+  },
+  "homepage": "https://github.com/yunxiao11xie/dsh-model-router#readme",
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 || >=0.2.1-rc.1 || >=0.2.2-rc.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./icon": "./assets/icon-180.png"
+  },
+  "files": ["index.js", "cordis.patch.yml", "README.md", "README.zh.md", "LICENSE", "assets/icon-180.png"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}

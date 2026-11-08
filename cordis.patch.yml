@@ -1,0 +1,13 @@
+- insert:
+    - id: model-router
+      name: dsh-model-router
+      config:
+        defaultModel: deepseek-flash
+        models:
+          # 内置档案已含 deepseek-flash / glm-5.3 / kimi-k2 / qwen-max / gpt-5.2；
+          # 这里按需覆盖（同 id 合并）或追加新模型。
+          - id: glm-5.3
+            provider: zai-coding-cn
+            strengths: [coding, backend, engineering-rigor, debugging, review, refactoring]
+            notes: 工程严谨、防御性强；适合服务端、基础设施、安全敏感代码、重构与审查
+            cost: medium
